@@ -9,7 +9,7 @@ from database import Base
 class Temperature(Base):
     __tablename__ = "temperatures"
 
-    id = Column(Integer, primary_key=True, autoincrement=True, index=True)
+    id = Column(Integer, primary_key=True, index=True)
     date_time = Column(DateTime, default=datetime.now, nullable=False)
     temperature = Column(Float, nullable=False)
     city_id = Column(Integer, ForeignKey("cities.id"))
