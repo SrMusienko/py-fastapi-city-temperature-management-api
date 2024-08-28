@@ -29,7 +29,7 @@ async def update_temperature_database(db: Session = Depends(get_db)):
     async with httpx.AsyncClient() as client:
         for city in cities:
             params = {
-                "key": os.getenv("APIKEY"),
+                "key": os.getenv("API_KEY"),
                 "q": city.name
             }
 
